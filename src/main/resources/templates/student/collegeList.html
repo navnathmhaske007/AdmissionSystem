@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>College Registration</title>
+<link rel="stylesheet" th:href="@{/css/college/collegeList.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="title" th:utext="${userName}"></div>
+		<table id="keywords" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th>College Name</th>
+					<th>Contact Number</th>
+					<th>Email ID</th>
+					<th>City</th>
+					<th>Branch</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="lalign" th:each="college: ${collegeList}">
+					<td th:text="${college.collegeName}"></td>
+					<td th:text="${college.contactNumber}"></td>
+					<td th:text="${college.emailId}"></td>
+					<td th:text="${college.city}"></td>
+					<td th:text="${branch}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
+
