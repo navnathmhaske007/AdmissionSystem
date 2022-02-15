@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Login Form | CodingLab </title>--->
+    <link rel="stylesheet" th:href="@{/css/success.css}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <form action="#" th:action="@{/index}">
+        <div class="title" th:utext="${successMessage}"></div>
+        <div class="input-box button">
+          <input type="submit" name="" value="Login">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+

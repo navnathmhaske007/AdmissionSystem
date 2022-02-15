@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>College Registration</title>
+<link rel="stylesheet" th:href="@{/css/studentRegistration.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<form action="#" th:action="@{/college/addMarks}" method="post"
+			th:object="${searchData}">
+			<div class="title" th:utext="${userName}"></div>
+			<div class="input-box">
+				<select name="categeory" id="categeory" th:field="*{categeory}">
+					<option value="Open">Open</option>
+					<option value="ST">ST</option>
+					<option value="SC">SC</option>
+					<option value="NT">NT</option>
+					<option value="OBC">OBC</option>
+					<option value="EWS">EWS</option>
+				</select>
+				<div class="underline"></div>
+			</div>
+			<div class="input-box underline">
+				<input type="number" placeholder="Enter Civil Cut off Marks"
+					required th:field="*{civil}">
+				<div class="underline"></div>
+			</div>
+			<div class="input-box">
+				<input type="number" placeholder="Enter Computer Cut off Marks"
+					required th:field="*{computer}">
+				<div class="underline"></div>
+			</div>
+			<div class="input-box underline">
+				<input type="number" placeholder="Enter Mechanical Cut off Marks"
+					required th:field="*{mechanical}">
+				<div class="underline"></div>
+			</div>
+			<div class="input-box">
+				<input type="number" placeholder="Enter IT Cut off Marks" required
+					th:field="*{it}">
+				<div class="underline"></div>
+			</div>
+			<div class="input-box underline">
+				<input type="number" placeholder="Enter Electrical Cut off Marks"
+					required th:field="*{electrical}">
+				<div class="underline"></div>
+			</div>
+			<div class="input-box">
+				<input type="number" placeholder="Enter EnTc Cut off Marks" required
+					th:field="*{entc}">
+				<div class="underline"></div>
+			</div>
+			<div class="input-box button">
+				<input type="submit" name="" value="Submit">
+			</div>
+		</form>
+		<div align="center" th:utext="${successMessage}">
+			<p style="font-size: 20; color: #FF1C19;">User Name or Password
+				invalid, please verify</p>
+		</div>
+	</div>
+</body>
+</html>
+
